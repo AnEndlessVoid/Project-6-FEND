@@ -300,8 +300,7 @@ nav h1 a {
 	.inside{
 		display: flex;
 		flex-direction : row;
-		flex-wrap : wrap
-		width: 100%;
+		flex-wrap : wrap;
 		justify-content : center;
 	}
 	header {
@@ -313,6 +312,7 @@ nav h1 a {
 		text-align: center;
 	}
 	.inside #map-container {
+
 		width : 100%;
 		position : relative;
 		height : 300px;
