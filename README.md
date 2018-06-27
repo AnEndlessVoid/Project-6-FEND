@@ -22,3 +22,6 @@ In a terminal, check the version of Python you have: `python -V`. If you have Py
 ## Dependencies
 
 This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/).
+
+##Thank you
+Special thanks to Mohammed Riaad for the study jam he organized on July 23 2018 and the study jam organized by Udacity and executed by Doug Brown for the MWS track, which really helped me structure my code.
