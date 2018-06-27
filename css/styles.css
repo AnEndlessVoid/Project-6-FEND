@@ -296,7 +296,6 @@ nav h1 a {
 		width : 100%;
 		display : flex;
 		flex-wrap : wrap;
-		min-width : 270px;
 	}
 	.inside{
 		display: flex;
