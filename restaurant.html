@@ -31,18 +31,22 @@
 
   <!-- Beginning main -->
   <main id="maincontent">
-    <!-- Beginning map -->
-    <section id="map-container" arialabelledby="map-aria-description" role="application">
-      <div id="map"></div>
-    </section>
-    <label id="map-aria-description" class="map-aria-description">Maps application</label>
-    <!-- End map -->
     <!-- Beginning restaurant -->
+
     <section id="restaurant-container">
       <h2 id="restaurant-name"></h2>
+        <div id="images">
       <img id="restaurant-img" alt="restaurant-image">
+      <!-- Beginning map -->
+      <section id="map-container" arialabelledby="map-aria-description" role="application">
+        <div id="map"></div>
+      </section>
+      <label id="map-aria-description" class="map-aria-description">Maps application</label>
+      <!-- End map -->
+        </div>
       <p id="restaurant-cuisine"></p>
     </section>
+
     <section id="restaurant-address-and-hours">
       <p id="restaurant-address" aria-labelledby="restaurant-address-label"></p>
       <label id="restaurant-address-label" class="restaurant-info-label">address</label>
