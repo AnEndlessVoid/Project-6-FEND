@@ -50,7 +50,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 /* ====================== Navigation ====================== */
 nav {
-  width: 100%;
+  width: 100vw;
   height: 80px;
   background-color: #252831;
   text-align: center;
@@ -196,10 +196,12 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : column;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -211,13 +213,13 @@ nav h1 a {
 }
 .inside #map {
   background-color: #ccc;
-  height: 100%;
-  width: 100%;
+  height: 100vw;
+  width: 100vw;
 }
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 50vw;
 }
 #restaurant-name {
   color: #f18200;
@@ -292,49 +294,49 @@ nav h1 a {
 /*=======================Media Queries======================*/
 
 @media only screen and (max-width: 600px){
-	#restaurant-list li {
-		width : 100%;
-		display : flex;
-		flex-wrap : wrap;
-	}
-	.inside{
-		display: flex;
-		flex-direction : row;
-		flex-wrap : wrap;
-		justify-content : center;
-	}
 	header {
 		display:flex;
 		flex-direction: column;
 	}
-	header #breadcrumb {
-		width : 100%;
-		text-align: center;
+	.inside #breadcrumb {
+		display : flex;
+		flex-wrap : wrap;
+		flex-direction : row;
+		width : 100vw;
+		justify-content: center;
+		padding : 10px 0 0 0;
+	}
+	.inside{
+		width : 100vw;
+		display: flex;
+		flex-direction : row;
+		flex-wrap:wrap;
+	}
+	.inside  nav {
+		display:block;
 	}
 	.inside #map-container {
-
-		width : 100%;
+		width : 100vw;
 		position : relative;
 		height : 300px;
 	}
 	.inside #restaurant-container {
-		width : 100%;
-		position : relative;
-		height : 300px;
-		text-align : center;
+		width : 100vw;
+		justify-content: center;
+		padding : 140px 10px 30px 10px;
 	}
 	.inside #reviews-container {
-		width : 100%;
-		margin : auto;
+		width : 100vw;
+		padding : 50px 10px 30px 10px;
 	}
 	.inside #footer {
-		width : 100%;
-		padding : 10px 0 0 0;
+		display : flex;
+		width : 100vw;
 	}
-	#reviews-list {
-		width : 100%
+	.inside #reviews-list {
+		width : 100vw;
 	}
-	#reviews-container h2 {
+	.inside #reviews-container h2 {
 		text-align : center;
 	}
 }
