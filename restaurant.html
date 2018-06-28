@@ -32,7 +32,6 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning restaurant -->
-
     <section id="restaurant-container">
       <h2 id="restaurant-name"></h2>
         <div id="images">
@@ -43,10 +42,9 @@
       </section>
       <label id="map-aria-description" class="map-aria-description">Maps application</label>
       <!-- End map -->
-        </div>
       <p id="restaurant-cuisine"></p>
     </section>
-
+  </div>
     <section id="restaurant-address-and-hours">
       <p id="restaurant-address" aria-labelledby="restaurant-address-label"></p>
       <label id="restaurant-address-label" class="restaurant-info-label">address</label>
@@ -76,7 +74,7 @@
   <!-- Main javascript file -->
   <script type="text/javascript" src="js/restaurant_info.js"></script>
   <script>
-  <!-- service worker -->
+  /*service worker*/
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
             .register('/js/sw.js')
