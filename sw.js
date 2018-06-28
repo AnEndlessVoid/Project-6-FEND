@@ -1,38 +1,41 @@
-/* help taken from https://developers.google.com/web/fundamentals/codelabs/offline/ */
-
-const cacheName = 'my-restaurant-cache';
+let cacheID = 'Project-6-FEND-cache-v1';
 const toCache = [
-  '/mws-restaurant-stage-1/',
-  '/mws-restaurant-stage-1/index.html',
-  '/mws-restaurant-stage-1/restaurant.html?id=1',
-  '/mws-restaurant-stage-1/restaurant.html?id=2',
-  '/mws-restaurant-stage-1/restaurant.html?id=3',
-  '/mws-restaurant-stage-1/restaurant.html?id=4',
-  '/mws-restaurant-stage-1/restaurant.html?id=5',
-  '/mws-restaurant-stage-1/restaurant.html?id=6',
-  '/mws-restaurant-stage-1/restaurant.html?id=7',
-  '/mws-restaurant-stage-1/restaurant.html?id=8',
-  '/mws-restaurant-stage-1/restaurant.html?id=9',
-  '/mws-restaurant-stage-1/restaurant.html?id=10',
-  '/mws-restaurant-stage-1/js/main.js',
-  '/mws-restaurant-stage-1/js/dbhelper.js',
-  '/mws-restaurant-stage-1/js/restaurant_info.js',
-  '/mws-restaurant-stage-1/css/styles.css',
-  '/mws-restaurant-stage-1/data/restaurants.json',
+  '/',
+  '/index.html',
+  '/restaurant.html',
+  '/img/',
+  '/img/1.png',
+  '/img/2.png',
+  '/img/3.png',
+  '/img/4.png',
+  '/img/5.png',
+  '/img/6.png',
+  '/img/7.png',
+  '/img/8.png',
+  '/img/9.png',
+  '/img/10.png',
+  '/js/',
+  '/js/main.js',
+  '/js/dbhelper.js',
+  '/js/restaurant_info.js',
+  '/css/styles.css',
+  '/data/restaurants.json',
 ];
 
 self.addEventListener('install', function (event) {
-  event.waitUntil(caches.open(cacheName).then(function (cache) {
-    return cache.addAll(toCache);
-  }).catch(function (error) {
-    return console.log('Caching error: ', error);
-  }));
+    console.log('It Works');
+    event.waitUntil(
+        caches.open(cacheID).then(function (cache) {
+            return cache.addAll(toCache);
+        })
+    );
 });
 
+
 self.addEventListener('fetch', function (event) {
-  console.log(event.request.url);
-  event.respondWith(
-    caches.match(event.request).then(function (response) {
-    return response || fetch(event.request);
-  }));
+    event.respondWith(
+        caches.match(event.request).then(function (response) {
+            return response || fetch(event.request);
+        })
+    );
 });
